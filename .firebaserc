@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "apoyos-prepanet": {
+      "hosting": {
+        "presentacionesprepanet": [
+          "apoyos-prepanet"
+        ]
+      }
+    }
+  }
+}

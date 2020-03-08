@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "presentacionesprepanet": {
@@ -117,8 +117,16 @@
               "devServerTarget": "presentacionesprepanet:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "presentacionesprepanet"
+    }
+  },
+  "defaultProject": "presentacionesprepanet",
+  "cli": {
+    "analytics": "fa2c6a09-9c57-4c6e-a097-b384613af356"
+  }
 }

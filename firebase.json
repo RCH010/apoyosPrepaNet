@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "presentacionesprepanet",
+      "public": "dist/presentacionesprepanet",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
