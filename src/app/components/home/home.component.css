@@ -1,0 +1,55 @@
+h1{
+    font-size: 4.5em;
+}
+.titleTema{
+    font-size: 3em;
+}
+.mainContent{
+    height: 94vh;
+    background: linear-gradient(90deg, rgb(61,108,184), rgb(27, 71, 147));
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+}
+.container {
+    height: 90vh;
+}
+.cardBtn{
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.cardBtn:hover{
+    cursor: pointer;
+    background-color: #bebebe;
+}
+.card-title{
+    font-size: 1em;
+}
+.card{
+    border-radius: 1em;
+}
+.card-footer{
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    font-size: .8em
+}
+
+
+@media screen and (max-width: 990px) {
+    h1{
+        font-size: 3em;
+    }
+    .titleTema{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 700px) {
+    h1{
+        font-size: 2em;
+    }
+    .titleTema{
+        font-size: 1.5em;
+    }
+    .card-title{
+        font-size: .9em
+    }
+}
