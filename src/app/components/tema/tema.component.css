@@ -1,0 +1,41 @@
+.mainContent{
+    height: 100%;
+    background: linear-gradient(90deg, rgb(61,108,184), rgb(27, 71, 147));
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+}
+.contentText{
+    font-size: .85em;
+}
+.cardSections {
+    width: 92%;
+}
+.btnP{
+    width: 80%;
+    background-color:  rgb(17, 59, 131);
+    border-color: transparent;
+}
+.btnP:hover{
+    width: 80%;
+    background-color:  rgb(87, 125, 187);
+}
+
+@media screen and (max-width: 990px) {
+    h1{
+        font-size: 3em;
+    }
+    /* .maxcard{
+        width: 35em;
+    } */
+
+}
+@media screen and (max-width: 700px) {
+    h1{
+        font-size: 2em;
+    }
+    /* .maxcard{
+        max-width: 55vw;
+        min-width: 55vw;
+    } */
+
+}

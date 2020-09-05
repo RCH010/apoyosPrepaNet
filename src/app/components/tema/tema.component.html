@@ -1,0 +1,59 @@
+<div class="mainContent" >
+    <a href="" name="top" id="top"></a>
+    <div class="container mt-1">
+        <div class="row">
+            <div class="col text-center whiteText mt-3">
+                <h1>{{sectionInfo.supertitle}}</h1>
+            </div>
+        </div>
+        <!-- sub seccion -->
+        <div class="row align-items-center" *ngFor="let sect of sectionInfo.sections">
+            <div class="col-md-3 mt-3 mt-md-1">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="whiteText text-left my-auto mr-2">
+                            {{sect.title}}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row justify-content-center">
+                    <div class="cardSections">
+                        <div class="card maxcard mt-3">
+                            <div class="card-header">
+                                <h5>{{sect.title}}</h5>
+                            </div>
+                            <div class="card-body text-justify contentText">
+                                <p *ngFor="let parr of sect.parrafos">
+                                    {{parr.text}}
+                                </p>
+                            </div>
+                            <div class="card-footer text-center cardBtn" *ngIf="sect.links.length > 0">
+                                <div class="row">
+                                    <p class="pl-3"><strong>Recursos:</strong></p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md" *ngFor="let vinculo of sect.links">
+                                        <a (click)="goTo(vinculo.enlace)" class="btn btnP btn-primary btn-sm mb-1">{{vinculo.nombre}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center justify-content-end">
+            <div class="col-md-4 mt-3 mt-md-1 mr-3 text-right">
+                <button class="btn btn-secondary btn-sm btn-block btn-light mt-4 mb-2" [routerLink]="newURL" href="#top">
+                    {{textfinalTema}}
+                </button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
