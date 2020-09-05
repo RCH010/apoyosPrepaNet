@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+.whiteText{
+    color: #ffffff;
+}
+.grayText{
+    color: #c0c0c0;
+}
+.PNetText{
+    color:rgb(27, 71, 147);
+}
