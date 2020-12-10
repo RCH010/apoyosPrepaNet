@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
+  usertype: String;
 
   ngOnInit(): void {
+    this.usertype = localStorage.getItem('uid');
+    if (!this.usertype) {
+      this.usertype = "normal"
+    }
   }
 
 }
