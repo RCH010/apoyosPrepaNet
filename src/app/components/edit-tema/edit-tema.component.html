@@ -1,0 +1,116 @@
+<div class="mainContent" >
+
+  <a href="" name="top" id="top"></a>
+
+  <div class="d-flex justify-content-center text-white"  *ngIf="loading === 'loading'">
+    <div class="row text-center mt-5">
+        <h1 class="h1 mx-auto">
+            Cargando...
+        </h1>
+    </div>
+    <div class="spinner-border text-primary ml-5 mt-5" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="container mt-1" *ngIf="loading != 'loading'">
+      <div class="row">
+          <div class="col text-center whiteText mt-3">
+              <h1>Editar tema</h1>
+          </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-5 text-left whiteText mt-3">
+          <label for="exampleFormControlInput1">Título principal de la sección:</label>
+          <input type="title" class="form-control form-control-lg" id="exampleFormControlInput1" name="sectionInfo.supertitle" [(ngModel)]="sectionInfo.supertitle" placeholder="Nombre Sección">
+        </div>
+      </div>
+      <br>
+      <!-- sub seccion -->
+      <div class="row align-items-center justify-content-center" *ngFor="let sect of sectionInfo.sections; let i = index">
+          <div class="col-md-9">
+            <div class="row justify-content-center">
+                <div class="cardSections">
+                    <div class="card maxcard mt-3">
+                        <div class="card-header">
+                          <label><strong>Subtitulo:</strong></label>
+                          <input type="text" class="form-control" name="sect.title" [(ngModel)]= "sect.title" placeholder="Nombre Sección">
+                        </div>
+                        <div class="card-body text-justify">
+                          <label><strong>Contenido:</strong></label>
+                          <div>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="sect.parrafos[0].text" rows="5" placeholder="Descripción"></textarea>
+                          </div>
+                        </div>
+                        <div class="card-footer text-center cardBtn">
+                          <div class="row">
+                              <p class="pl-3"><strong>Enlaces a Recursos:</strong></p>
+                          </div>
+                          <div class="col" *ngFor="let vinculo of sect.links">
+                            <div class="row">
+                                <label class="small" for="">Nombre recurso:</label>
+                                <input type="text" class="form-control" name="vinculo.nombre" [(ngModel)]="vinculo.nombre" placeholder="Nombre del Recurso">
+                                <br>
+                                <label class="small" for="">Enlace recurso:</label>
+                                <input type="text" class="form-control" name="vinculo.enlace" [(ngModel)]="vinculo.enlace" placeholder="https://enlace-al-recurso.com/">
+                            </div>
+                            <br>
+                          </div>
+                          <div>
+                            <div class="row justify-content-end">
+                              <div class="col-5">
+                                <button class="btn btn-secondary btn-block btn-sm" (click)="addNewLink(i)">Agregar enlace</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <div class="row align-items-center justify-content-center" *ngIf="showError">
+        <div class="col-md-9 justify-content-center">
+          <div class="row justify-content-center" >
+            <div class="col">
+              <div class="row justify-content-center">
+                <div class="alert alert-danger px-3 form-control mb-0 p-1 small text-center" >
+                  <small>{{msgError}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-9 justify-content-center">
+          <div class="row align-items-center justify-content-around">
+            <div class="col-4">
+              <div class="row justify-content-center">
+                <button class="btn btn-block btn-secondary" (click)="newSubSection()">Añadir subsección</button>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="row justify-content-center">
+                <button class="btn btn-block btn-primary" (click)="saveChanges()">Guardar cambios</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row align-items-center justify-content-end">
+          <div class="col-md-4 mt-3 mt-md-1 mr-3 text-right">
+              <button class="btn btn-secondary btn-sm btn-block btn-light mt-4 mb-2" [routerLink]="newURL" href="#top">
+                  {{textfinalTema}}
+              </button>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+  </div>
+</div>
