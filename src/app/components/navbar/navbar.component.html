@@ -1,11 +1,11 @@
 <nav class="navbar sticky-top navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand py-auto" routerLink="home">
+        <a class="navbar-brand py-auto" (click)="goto()">
             <img src="./assets/LogoPrepaNetNegro.png" class="img-responsive logo" alt="PrepaNet Mty">
         </a>
         <ul class="navbar-nav mt-lg-0">
             <li class="nav-item my-2 px-2 my-sm-0 btn-light btn-sm">
-                <a class="nav-link" routerLink="home">Inicio</a>
+                <a class="nav-link" (click)="goto()">Inicio</a>
             </li>
             <li class="nav-item my-2 px-2 my-sm-0 btn-light btn-sm" *ngIf="usertype != 'normal'">
                 <a class="nav-link" (click)="logout()">Cerrar Sesión</a>

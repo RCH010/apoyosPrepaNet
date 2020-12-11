@@ -31,4 +31,11 @@ export class NavbarComponent implements OnInit {
       })
     })
   }
+  goto(){
+    let address = `/home`;
+    if(this.usertype != 'normal') {
+      address = `/admin/home`;
+    }
+    this.router.navigateByUrl(address);
+  }
 }

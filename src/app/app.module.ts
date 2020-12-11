@@ -11,6 +11,7 @@ import { TemaComponent } from './components/tema/tema.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { EditTemaComponent } from './components/edit-tema/edit-tema.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     HomeComponent,
     TemaComponent,
     NavbarComponent,
-    AdminComponent
+    AdminComponent,
+    EditTemaComponent
   ],
   imports: [
     BrowserModule,
