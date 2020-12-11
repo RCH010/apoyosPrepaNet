@@ -16,6 +16,7 @@ export class TemaComponent implements OnInit {
   newURL: string;
   usertype: string;
   sectionP: any;
+  loading:string = "loading";
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -24,7 +25,6 @@ export class TemaComponent implements OnInit {
 
   ngOnInit(): void {
     this.idSection = parseInt(this.route.snapshot.url[1].path) - 1;
-    // this.sectionInfo = infoTemas[this.idSection];
     this.textfinalTema = this.getnextText();
     this.nextwhat();
     window.scrollTo({top: 0, left: 0});
@@ -37,6 +37,9 @@ export class TemaComponent implements OnInit {
     this.db.getSection(this.idSection + 1).subscribe(result => {
       let res:any = result[result.length - 1]
       this.sectionInfo = res.payload.doc.data ()
+      if(result) {
+        this.loading = "complete"
+      }
     })
 
   }

@@ -1,5 +1,16 @@
 <div class="mainContent" >
     <a href="" name="top" id="top"></a>
+    <div class="d-flex justify-content-center text-white"  *ngIf="loading === 'loading'">
+      <div class="row text-center mt-5">
+          <h1 class="h1 mx-auto">
+              Cargando...
+          </h1>
+      </div>
+      <div class="spinner-border text-primary ml-5 mt-5" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
     <div class="container mt-1">
         <div class="row">
             <div class="col text-center whiteText mt-3">

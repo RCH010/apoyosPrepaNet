@@ -3,6 +3,7 @@
     background: linear-gradient(90deg, rgb(61,108,184), rgb(27, 71, 147));
     border-top-left-radius: 3em;
     border-top-right-radius: 3em;
+    white-space: pre-wrap;
 }
 .contentText{
     font-size: .85em;
