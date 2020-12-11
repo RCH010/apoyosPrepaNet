@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { link } from 'src/app/models/link';
 import { Section } from 'src/app/models/section';
 import { DbService } from 'src/app/services/db.service';
-import { infoTemas } from 'src/environments/environment';
 
 @Component({
   selector: 'app-edit-tema',

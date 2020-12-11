@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { infoTemas } from 'src/environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DbService } from 'src/app/services/db.service';
 
@@ -10,7 +9,6 @@ import { DbService } from 'src/app/services/db.service';
 })
 export class TemaComponent implements OnInit {
   idSection: number;
-  informacion = infoTemas;
   sectionInfo: any;
   textfinalTema: string;
   newURL: string;
