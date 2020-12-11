@@ -12,6 +12,9 @@ export class DbService {
   ) { }
 
   getSection(idSection: number){
-    return this.afs.collection('supertemas', ref => ref.where('idTema', '==', idSection)).snapshotChanges()
+    return this.afs.collection('supertemas', ref => ref.where('idTema', '==', idSection)).snapshotChanges();
+  }
+  updateSection(idSection: string, section: any){
+    return this.afs.collection('supertemas').doc(idSection).update(section);
   }
 }
