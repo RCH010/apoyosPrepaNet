@@ -20,9 +20,6 @@
   width: 80%;
   background-color:  rgb(87, 125, 187);
 }
-.alert{
-  width: 80%;
-}
 
 @media screen and (max-width: 990px) {
   h1{

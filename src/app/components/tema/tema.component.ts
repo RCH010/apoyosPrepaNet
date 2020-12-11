@@ -31,7 +31,6 @@ export class TemaComponent implements OnInit {
     if (!this.usertype) {
       this.usertype = "normal"
     }
-    console.log("USER TYPE: ", this.usertype)
     this.db.getSection(this.idSection + 1).subscribe(result => {
       let res:any = result[result.length - 1]
       this.sectionInfo = res.payload.doc.data ()

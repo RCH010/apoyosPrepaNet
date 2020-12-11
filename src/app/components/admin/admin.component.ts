@@ -28,7 +28,7 @@ export class AdminComponent implements OnInit {
     if(loginForm.valid){
       this.authService.signIn(this.email, this.password).then(res =>{
         localStorage.setItem('uid', res.user.uid);
-        console.log("UID: ", res.user.uid)
+
         this.router.navigateByUrl('/admin/home').then(res => {
           this.msgErr = undefined
           location.reload()
