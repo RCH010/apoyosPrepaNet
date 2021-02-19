@@ -1,4 +1,4 @@
-## Presentacionesprepanet
+## Apoyos PrepaNet Mty
 
 This project was developed for [PrepaNet - Mty](https://www.facebook.com/prepanetmty), in order to centralize the information a new student needs to have. 
 
