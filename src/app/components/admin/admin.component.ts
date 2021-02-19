@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { window } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
