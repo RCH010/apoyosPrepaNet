@@ -6,7 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TemaComponent } from './components/tema/tema.component';
 import { AuthGuard } from './guards/auth.guard';
 
-
+// TODO: check why using ID doesnt update correctly
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent},

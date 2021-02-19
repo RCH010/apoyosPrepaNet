@@ -27,22 +27,6 @@ export class AuthService {
         JSON.parse(localStorage.getItem('user'));
       }
     })
-    // this.userData = this.afAuth.authState.pipe(
-    //   switchMap(user => {
-    //     // Logged in
-    //     if (user) {
-    //       this.userUID = user.uid;
-    //       localStorage.setItem('uid', user.uid)
-    //       return user
-    //       // return this.afs.collection('users').doc(user.uid).valueChanges();
-    //       return user;
-    //     } else {
-    //       // Logged out
-    //       localStorage.removeItem('uid')
-    //       return null;
-    //     }
-    //   })
-    // );
   }
 
   signIn(email: string, password: string){
